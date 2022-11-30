@@ -14,14 +14,14 @@ function(){
    */
   $li.each((index, element)=>{
     let test = $(element).children('a')
-    test.click(function(z){$(element).fadeOut("slow")})
+    test.click(function(e){$(element).fadeOut("slow")})
   })
   
     /**
    * Adds new list item to <ul>
    */
-  const addListItem = function(z) {
-    z.preventDefault()
+  const addListItem = function(e) {
+    e.preventDefault()
     const text = $('input').val();
     console.log(text)
     // the remaining code... ;)
