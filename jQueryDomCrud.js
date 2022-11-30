@@ -3,7 +3,7 @@ $(document).ready(
     // Create a new <a> element containing the text "Buy Now!"
     // with an id of "cta" after the last <p>
     
-    function(z) {
+    function(e) {
     
     const $pTag = $("p")
     const $aTag = $('<a>')
@@ -33,7 +33,7 @@ $(document).ready(
     // When clicked, the the "Buy Now!" link should be removed
     // and replaced with text that says "Added to cart"
     
-    $aTag.click(function(z){
-    z.preventDefault()
+    $aTag.click(function(e){
+    e.preventDefault()
     $aTag.text("Added to Cart")
     })})
