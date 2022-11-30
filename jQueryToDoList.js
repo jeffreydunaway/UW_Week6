@@ -1,12 +1,5 @@
-/**
- * Toggles "done" class on <li> element
- */
 $(document).ready(
 function(){
-
-/**
- * Delete element when delete link clicked
- */
   /**
    * Toggles "done" class on <li> element
    */
@@ -21,17 +14,17 @@ function(){
    */
   $li.each((index, element)=>{
     let test = $(element).children('a')
-    test.click(function(e){$(element).fadeOut("slow")})
+    test.click(function(z){$(element).fadeOut("slow")})
   })
   
     /**
    * Adds new list item to <ul>
    */
-  const addListItem = function(e) {
-    e.preventDefault()
+  const addListItem = function(z) {
+    z.preventDefault()
     const text = $('input').val();
     console.log(text)
-    // rest here...
+    // the remaining code... ;)
     let newItem = $('<li>')
     let newSpan = $('<span>').on('click',()=>{newItem.toggleClass('done')})
     let newAtag =$('<a>')
@@ -42,7 +35,7 @@ function(){
     newItem.append(newSpan).append(newAtag).appendTo(".today-list")
   };
 
-  // add listener for add
+  // add listener
   $('.add-item').click(addListItem)
 }
   ) 
