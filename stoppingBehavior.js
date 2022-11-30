@@ -6,8 +6,8 @@ $(document).ready(
 // When clicked, "More info" link should alert "Here's some info"
 // instead of going to a new webpage
   function(){
-    const stopHREF = function(e){
-      e.preventDefault();
+    const stopHREF = function(z){
+      z.preventDefault();
       alert('More Info')
     }
     $('#more-info').click(stopHREF)
@@ -20,8 +20,8 @@ $(document).ready(
 // Should *not* alert "meow"
     
     const meow = document.getElementById('cat')
-    const stopCat = function(e){
-      e.stopPropagation();
+    const stopCat = function(z){
+      z.stopPropagation();
       alert('Bow Wow!')
     }
     $('button').click(stopCat)
